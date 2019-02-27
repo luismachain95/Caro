@@ -28,10 +28,10 @@ class Caro extends Component {
 
         this.state = {
             images: [
-                "/image/img1.jpg",
-                "/image/img2.jpg",
-                "/image/img1.jpg",
-                "/image/img2.jpg"
+                "https://luismachain95.github.io/Caro/image/shoes1.jpg",
+                "https://luismachain95.github.io/Caro/image/shoes2.jpg",
+                "https://luismachain95.github.io/Caro/image/shoes3.jpg",
+                "https://luismachain95.github.io/Caro/image/shoes4.jpg"
             ],
             index: 0,
             translate: 0,
