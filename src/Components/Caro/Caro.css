@@ -1,0 +1,79 @@
+/*
+* Developer by Machain
+* Caro - Carousel
+* v1.0
+* © Copyright 2019
+*/
+.caro {
+    position: relative;
+    width: 750px;
+    height: 480px;
+    overflow: hidden;
+    white-space: nowrap; /* Para que NO se acomoden uno abajo del otro (recorda que estas usando translateX)*/
+}
+.caro .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.caro .content .item {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.caro .arrow {
+    cursor: pointer;
+    width: 50px;
+    height: 36px;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 18px;
+    color: #fff;
+    opacity: 0;
+    transition: 0.4s ease;
+    z-index: 1000;
+}
+.caro:hover .arrow {
+    font-weight: bold;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.5);
+}
+.caro .arrow.prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 0 3px 3px 0;
+    outline: none;
+}
+.caro .arrow.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    border-radius:  3px 0 0 3px;
+    outline: none;
+}
+
+.caro .dots {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+.caro .dots .dot {
+    display: inline-block;
+    background-color: rgba(0,0,0,0.5);    
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.caro .dots .dot:last-child {
+    margin-right: 0;
+}
+.caro .dots .dot:hover {
+    background-color: #fff;
+}
+.caro .dots .dot.active {
+    background-color: #fff;
+}
