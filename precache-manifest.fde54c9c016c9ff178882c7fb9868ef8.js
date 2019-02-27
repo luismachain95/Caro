@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/Caro/static/js/runtime~main.094cf4c9.js"
   },
   {
-    "revision": "7acdb3974dd431c0660c",
-    "url": "/Caro/static/js/main.7acdb397.chunk.js"
+    "revision": "a1d8b85146c716ad2806",
+    "url": "/Caro/static/js/main.a1d8b851.chunk.js"
   },
   {
     "revision": "5ec21d738fba382f2658",
     "url": "/Caro/static/js/2.5ec21d73.chunk.js"
   },
   {
-    "revision": "7acdb3974dd431c0660c",
+    "revision": "a1d8b85146c716ad2806",
     "url": "/Caro/static/css/main.585a225a.chunk.css"
   },
   {
-    "revision": "237710fd19a0847a87146840f8e06b23",
+    "revision": "a368ab4a907267b6b07cadf91d66ef27",
     "url": "/Caro/index.html"
   }
 ];
