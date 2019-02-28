@@ -37,7 +37,6 @@ class App extends Component {
     const config1 = {
       autoplay: true,
       time: 1000,
-      dots: false
     }
     //Autoplay, tiempo de 2 seg y sin dots
     const config2 = {
