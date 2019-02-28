@@ -7,7 +7,7 @@ class Caro extends Component {
 
     constructor(props){
         super(props);
-
+        //console.log(this.props)
         //Autoplay
         const autoplay = (this.props.config && this.props.config.autoplay)? true: false;
         
@@ -26,34 +26,40 @@ class Caro extends Component {
             arrow = false;
         }
 
+        
+        
         this.state = {
-            images: [
-                "https://luismachain95.github.io/Caro/image/shoes1.jpg",
-                "https://luismachain95.github.io/Caro/image/shoes2.jpg",
-                "https://luismachain95.github.io/Caro/image/shoes3.jpg",
-                "https://luismachain95.github.io/Caro/image/shoes4.jpg"
-            ],
+            images: this.props.images,
             index: 0,
             translate: 0,
             interval: null,
             autoplay: autoplay,
             time: time,
             dots: dots,
-            arrow: arrow
+            arrow: arrow,
+            width: this.props.width,
+            height: this.props.height
         }
         
         
     }
 
     componentDidMount = () => {
-
-        
         //Controla el autoplay
         if(this.state.autoplay){
             this.startTimer() //Inicia el Timer para el autoplay
         }
     }
 
+    componentDidUpdate = (prevProps) => {
+    
+        if (prevProps.images[0].image !== this.props.images[0].image) {
+            this.setState({
+                images: this.props.images
+            })
+        }
+
+    }
     
     startTimer = () => {
         const interval = setInterval(() => {
@@ -132,7 +138,10 @@ class Caro extends Component {
      * Retorna el tamaño del visor de nuestro carousel
      */
     widthCaro(){
-        return document.querySelector('.caro').clientWidth
+        /* console.log(this.state.width);
+        return document.querySelector('.caro').clientWidth */
+        
+        return Number(this.state.width)
     }
     
 
@@ -176,8 +185,11 @@ class Caro extends Component {
             index,      // Indice
             translate,  // Cuanto se va a trasladar
             dots,       //Dots
-            arrow       //Arrows
+            arrow,       //Arrows
+            width,       //Ancho
+            height       //Alto
         } = this.state;
+        
 
         const style = {
             transform: `translate(${translate}px)`,
@@ -185,7 +197,7 @@ class Caro extends Component {
         }
 
         return (
-           <div className="caro">
+           <div className="caro" style={{width: `${width}px`, height:  `${height}px`}}>
                 <div className="content"
                     style={style}
                 >

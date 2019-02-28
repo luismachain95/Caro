@@ -11,7 +11,6 @@ class Dots extends Component {
             clickDot,
             show
         } = this.props;
-
         //Visibilidad de Dots
         if(show === false) return null;
 

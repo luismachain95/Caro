@@ -5,8 +5,9 @@ class CaroItem extends Component {
     render() {
 
         const {
-            image //Una Imagen
-        } = this.props;
+            image, //Una Imagen
+            link //Su enlace
+        } = this.props.image;
 
         const style = {
             backgroundImage: `url(${image})`,
@@ -15,10 +16,12 @@ class CaroItem extends Component {
             backgroundPosition: '50% 60%'
         }
         return (
-           <div className="item"
-                style={style}
-            >
-           </div> 
+            <a href={link}>
+                <div className="item"
+                    style={style}
+                >
+                </div> 
+            </a>
         )
     }
 }
